@@ -1,0 +1,11 @@
+(base) compute-2-37:/lustre/scratch$ cd cvanbeek
+(base) compute-2-37:/lustre/scratch/cvanbeek$ ls
+(base) compute-2-37:/lustre/scratch/cvanbeek$ mkdir testing
+(base) compute-2-37:/lustre/scratch/cvanbeek$ cd /lustre/scratch/jenjense/200Mammals-old/
+(base) compute-2-37:/lustre/scratch/jenjense/200Mammals-old$ -1 | wc -l
+-bash: -1: command not found
+0
+(base) compute-2-37:/lustre/scratch/jenjense/200Mammals-old$ ls  /lustre/scratch/jenjense/200Mammals-old/ | -l
+-bash: -l: command not found
+(base) compute-2-37:/lustre/scratch/jenjense/200Mammals-old$ ls -1 | wc -l
+96
