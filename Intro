@@ -1,11 +1,14 @@
 (base) compute-2-37:/lustre/scratch$ cd cvanbeek
 (base) compute-2-37:/lustre/scratch/cvanbeek$ ls
 (base) compute-2-37:/lustre/scratch/cvanbeek$ mkdir testing
-(base) compute-2-37:/lustre/scratch/cvanbeek$ cd /lustre/scratch/jenjense/200Mammals-old/
-(base) compute-2-37:/lustre/scratch/jenjense/200Mammals-old$ -1 | wc -l
--bash: -1: command not found
-0
-(base) compute-2-37:/lustre/scratch/jenjense/200Mammals-old$ ls  /lustre/scratch/jenjense/200Mammals-old/ | -l
--bash: -l: command not found
-(base) compute-2-37:/lustre/scratch/jenjense/200Mammals-old$ ls -1 | wc -l
-96
+(base) quanah:$ cd /lustre/scratch/jenjense/200Mammals-old/
+(base) quanah:/lustre/scratch/jenjense/200Mammals-old$ cd ..
+(base) quanah:/lustre/scratch/jenjense$ ls
+200mammals      200mammals_rnd1_jenjense  bat1K        Louisiana  MYOSEP-sequences  USDA
+200Mammals-old  200m-old                  gge_scripts  macro      Old200M
+(base) quanah:/lustre/scratch/jenjense$ cd 200mammals
+(base) quanah:/lustre/scratch/jenjense/200mammals$ ls
+round2_complete  round3_complete
+(base) quanah:/lustre/scratch/jenjense/200mammals$ ls -1 | wc -l
+2
+(base) quanah:/lustre/scratch/jenjense/200mammals$
