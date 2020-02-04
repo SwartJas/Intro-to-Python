@@ -1,0 +1,45 @@
+# US population growth
+# Calculate US populaiton growth based on current metrics
+# Coenie van Beek
+#29-01-2020
+
+#import modules needed
+# add variables
+# ask for input
+# do the calculation
+# the answer us a print statment >>>> 
+
+# Current pop 307,357,870
+# death 1 per 13s   
+# birth 1 per 7s
+# immigrant 1 per 35s
+# 1 year =365 days
+# 86400 seconds in a day
+
+# defining inputs
+# all decimals have been rounded up, you cant have .14 of a person
+
+Birth = 4505195
+Death = 2426155
+Immigrant = 901185
+Current = 307357870
+#save time using one term instead of three
+Yearly_growth = (Birth + Immigrant - Death)
+
+print("Current Population 2020", Current)
+print("Yearly Births", Birth)
+print("Yearly Deaths", Death)
+print("Yearly Immigrants", Immigrant)
+print("Yearly Growth", Yearly_growth, "people per year")
+
+#yearly population growth = current +(Birth + Immigrant - Death)
+
+number_of_years_input = input("How many years? ")
+# change the input into an interger
+number_of_years_int = int(number_of_years_input)
+
+#dont forget spaces
+#growth = (Current + number_of_years_int * (Birth + Immigrant + Death))
+growth = (Current) + (number_of_years_int * Yearly_growth)
+print("Estimated population in", number_of_years_int ," years will be", growth ,"people")
+
