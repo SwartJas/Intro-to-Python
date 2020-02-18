@@ -1,0 +1,21 @@
+#correcting script
+#17/02/20
+#Coenraad R. van beek
+#Python class
+
+
+
+# string1 = "I am a student"
+# string2 = in the biology department.
+# string3 = string1 and string2
+# print(string3
+
+#Corrections
+# removed a space after the equals sign
+string1 ="I am a student"
+#removed a space after the equals sign, added in  a " " " followed by a space, ended with "
+string2 =" in the biology department."
+#places string 1 and string2 in brackets, replaced the word and with the + symbol
+string3 = (string1)+(string2)
+#fixed print statment by placing the subject in brackets
+print (string3)
