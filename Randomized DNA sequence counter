@@ -1,0 +1,33 @@
+#18/02/2020
+#DNA counter
+#Coenie van Beek
+#Add code to 
+#1) Calculate the number of  G’s,  
+#2) Calculate the number of A’s,  and 
+#3) Calculate (together) the number of A’s and C’s
+
+
+
+
+
+#given code
+import random
+bases = ["A", "C", "T", "G"]
+sequence = random.choices(bases, k=100)
+print(sequence)
+
+#1) count all the G's
+g = sequence.count("G")
+print ("G's in the sequnce:")
+print (g)
+
+#2) count all the A's
+a = sequence.count("A")
+print ("A's in the sequnce:")
+print (a)
+
+#3) count all the A's and C'seek
+c = sequence.count("C")
+ac = (c) + (a)
+print ("AC's in the sequence:")
+print(ac)
