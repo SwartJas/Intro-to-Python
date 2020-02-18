@@ -1,0 +1,47 @@
+#Bat name abreviator
+#17/02/20
+#Coenie van Beek
+
+
+#Myotis_austroriparius 
+#Myotis_septentrionalis
+#Eptesicus_fuscus
+
+#make a script that will creat an abreviation created from 2 input strings
+print ("Scientific names for organisms can be very long and complex. To make things"
+       "\neasier you can make an abreviation of the long scientific name to speed"
+       "\nthings up. Scientific names have two parts, the Genus and the species."
+       "\nThe Genus is always starts capitilized and the species is always lower case"
+       "\nThis abreviator makes a 6 letter all caps abrevation by combing the first"
+       "\nthree letters of the genus and the species"
+       "\nhere are three species of bats that you can try out:\n"
+       "\nMyotis austroriparius"
+       "\nMyotis septentrionalis"
+       "\nEptesicus fuscus")
+
+
+#Script for string 1
+genus1 = input("Please enter the genus name of Myotis austroriparius. ")
+#Script for script 2
+species1 = input("Please enter the species name of Myotis austroriparius. ")
+
+#Script for string 1
+genus2 = input("Please enter the genus name of Myotis septentrionalis. ")
+#Script for script 2
+species2 = input("Please enter the species name of Myotis septentrionalis. ")
+
+#Script for string 1
+genus3 = input("Please enter the genus name of Eptesicus fuscus. ")
+#Script for script 2
+species3 = input("Please enter the species name of Eptesicus fuscus. ")
+
+
+#Now to define an abreviation
+abv1 = genus1[0:3] + species1[0:3]
+abv2 = genus2[0:3] + species2[0:3]
+abv3 = genus3[0:3] + species3[0:3]
+
+#Now to create one printable term
+abv4 = abv1[0:6] + " ; " + abv2[0:6] + " ; " + abv3[0:6]
+print ("The abreviation for the 3 bat species are:") 
+print (abv4.upper())
