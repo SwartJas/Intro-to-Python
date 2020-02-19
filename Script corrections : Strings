@@ -13,7 +13,7 @@
 #Corrections
 # removed a space after the equals sign
 string1 ="I am a student"
-#removed a space after the equals sign, added in  a " " " followed by a space, ended with "
+#added in  a " " " followed by a space, ended with "
 string2 =" in the biology department."
 #places string 1 and string2 in brackets, replaced the word and with the + symbol
 string3 = (string1)+(string2)
