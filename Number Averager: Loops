@@ -1,0 +1,31 @@
+# number averager
+#26/02/2020
+#Coeni van Beek
+
+#For range[1:20]
+#calculate
+ 
+ 
+print("Python has a lot of neat modules that can do several basic functions, \nhowever they are limited to fixed data sets for example\nif you want to calculate the average \nof all natural numbers from 1 to 20 you can like this:" 
+#import the moduale, moduales need to be in the directory path that you are grabbing them form, if not then you will get a syntax error
+import statistics
+statistics.path.append('C:\Users\vanbe\Documents\intro_to_python\Lib\__pycache__\statistics.cpython-38)
+    data = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,]
+    x = statistics.mean(data)
+print("The average fo the first 20 natural numbers is: " x)
+
+
+
+#define the elemnts that the loop will use
+#This one works
+print("This is fine and all especially if you hae a fixed data set, \n but what if your data set is not fixed, or changes hte whole time?")
+n = input("Up to which natural number do you want to calculate the average of? " )
+n = int(n)
+average = 0
+sum = 0
+
+for num in range(0,n+1, 1):
+    sum = sum+num;
+    average = sum/n
+print("For the first", n, "natural number(s) the average is", average)
+    
