@@ -1,0 +1,13 @@
+#AT content
+#March 03 2020
+#Coenie van Beek
+#
+#
+#ACTGATCGATTACGTATAGTATTTGCTATCATACATATATATCGATGCGTTCAT
+
+#create the string that will be used
+atcontent = "ACTGATCGATTACGTATAGTATTTGCTATCATACATATATATCGATGCGTTCAT"
+
+counter = atcontent.count('AT')
+
+print("Count of AT in ACTGATCGATTACGTATAGTATTTGCTATCATACATATATATCGATGCGTTCAT is : " + str(counter))
