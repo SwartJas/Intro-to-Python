@@ -1,0 +1,23 @@
+#Enzyme calculator
+#March 3 2020
+#Coenie van Beek
+#ACTGATCGATTACGTATAGTAGAATTCTATCATACATATATATCGATGCGTTCAT
+#G*AATTC
+#ACTGATCGATTACGTATAGTAG*AATTCTATCATACATATATATCGATGCGTTCAT
+
+print("EcoR1 cuts at the site G*AATTC")
+ecor1 = "ACTGATCGATTACGTATAGTAGAATTCTATCATACATATATATCGATGCGTTCAT"
+#Establish the length of the fragment
+p1 = len(ecor1)
+counter = ecor1.count('GAATTC')
+
+print("Count of EcoR1 cuts in ACTGATCGATTACGTATAGTAGAATTCTATCATACATATATATCGATGCGTTCAT is : " + str(counter))
+#since EcoR1 only cuts once we can use the find command, but remeebr to add one since python starts counting at 0
+p2 = ecor1.find("GAATTC")
+print("The length of the sequence is,", p1)
+print("EcoR1 cuts at the 22nd G in the sequence")
+#establish a a few defined terms for the stirngs to work converting things into intergers for the math to work
+p3 = int(p2) + 1
+p4 = 55
+p5 = (p4) - (p3)
+print("The first fragment will be ,", p3,"bases long, the second fragment will be,", p5 ,"bases long.")
