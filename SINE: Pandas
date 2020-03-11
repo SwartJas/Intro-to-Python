@@ -1,0 +1,63 @@
+#PANDAS
+#11/03/2020
+#COenraad van Beek
+
+#Data manipulation in python using hte Pandas module
+#1.  Use aVan_rm.bed file in “/lustre/work/jenjense/python/Pandas”
+#2.  Make sure it has proper column names
+#3.  Determine what families are in there (SINE, etc)
+#4.  Create new dataframe from that file using only elements in family “SINE” 
+#5.  Drop columns “Strand” and “Score”
+#6.  Create new column “Length”
+#7.  Determine min, max, and mean for all SINEs
+#8.  Determine min, max, and mean length for each sub-family of SINE (metulj and ZenoSINE)
+
+print("_________________________________________________________")
+# import modules
+import pandas as pd
+
+print("_________________________________________________________")
+#2read in m csv file using the 'forward-slash t' command since bed files use a tab to seperate columns.
+print("Read in bed file ...")
+avan_df= pd.read_csv('aVan_rm.bed', sep='\t', header=None)
+header = ['Scaffold', 'Start', 'Stop', 'Element', 'Score','Strand', 'Family', 'Sub-family', 'Divergence']
+avan_df.columns = header[:len(avan_df.columns)]
+print(avan_df.head())
+
+print("_________________________________________________________")
+#3How many families are there, each family would be unique 
+print("Unique Family names in families = ", avan_df.Family.unique())
+
+print("_________________________________________________________")
+#4Create dataframe from Family
+sine = avan_df[avan_df['Family'] == 'SINE']
+print(sine.head())
+
+print("_________________________________________________________")
+#5drop the colums strand and score
+print("Dropping columns 'Strand' and 'Score' from new SINE only Dataframe, ")
+co_sine = sine.drop(["Strand", "Score"], axis=1)
+print(co_sine.head())
+
+print("_________________________________________________________")
+#6creat a new column
+co_sine["Length"] = (co_sine['Stop'] - co_sine['Start'])
+print("Now adding new series name 'Length', it is the difference between 'Stop' and 'Start'",)
+print(co_sine.head())
+
+print("_________________________________________________________")
+#7 Min/max/Mean of the SINE family
+min_sine = co_sine['Length'].min()
+max_sine = co_sine['Length'].max()
+mean_sine = co_sine['Length'].mean()
+print("The Minimum, Maximum and Mean of SINE is:", min_sine,";", max_sine,";", mean_sine)
+
+print("_________________________________________________________")
+#8 getting the min/max/mean for the SINE subfamily(sf_sine)
+sfmin_sine = co_sine.groupby('Sub-family')['Length'].min()
+sfmax_sine = co_sine.groupby('Sub-family')['Length'].max()
+sfmean_sine = co_sine.groupby('Sub-family')['Length'].mean()
+print("The Minimum of SINE sub-families are :", sfmin_sine,)
+print("The Maximum of SINE sub-families are :", sfmax_sine,)
+print("The Mean of SINE sub-families are:", sfmean_sine)
+print("_________________________________________________________")
