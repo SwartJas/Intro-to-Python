@@ -12,7 +12,7 @@ import statistics
 statistics.path.append('C:\Users\vanbe\Documents\intro_to_python\Lib\__pycache__\statistics.cpython-38)
     data = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,]
     x = statistics.mean(data)
-print("The average fo the first 20 natural numbers is: " x)
+print("The average fo the first 20 natural numbers is: ", x)
 
 
 
