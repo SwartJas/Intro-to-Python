@@ -35,7 +35,7 @@ print("Hello user I am thinking of a number between -10 and 10.")
 while score < 5:
 	print("What is your guess?")
 	guess = input()
-	gu ess = int(guess)
+	guess = int(guess)
 	print("You guessed", guess)
 #3	Creating a loop with the conditions, unlimited tries are allowed, try to get it in less than five
 	if guess < number:
