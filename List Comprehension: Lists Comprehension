@@ -1,0 +1,75 @@
+#14/04/2020
+#List Comprehension
+#Coenraad van Beek
+
+#Workflow
+#“The quick brown fox jumped over the lazy dog”
+#1 Count the number of spaces in the above string. 
+#2 Find all the words that have the letter “o” in the above string  
+#3 Find all the words that have at least 5 letters in the above string
+#4 Find all the numbers from 1 to 1000 that have a “3” in it. Ex: 23, 37, 903
+print("_______________________________")
+
+print("_______________________________")
+#1 Count the number of spaces in the above string. 
+	#Define the sentence
+	#create and open list that can be used to append informaiton to
+saying = "The quick brown fox jumped over the lazy dog."
+#^^^this makes the saying into a string
+print("There is a pangram used in English when learning cursive which contains all the letters of the alphabet that sentence is:\n", saying)
+print("you can get Microsoft Office to print this statement by typing in '=rand.old()' and pressing enter/return.\n")
+space = []
+for s in saying:
+	if s.count(" ")>0:
+		space.append(s)
+print("The are also", len(space), "spaces in this sentence. This sentence is also great when testing out new fonts in a word processor.")
+print("The number of spaces were calculated using a loop, now lets use a form of list comprehension.")
+spaces=[s for s in saying if s.count(" ")>0]
+print("When using list comprehension you", len(spaces), "spaces in this sentence. This is much faster than using a loop.")
+print("_______________________________")
+
+print("_______________________________")
+#2Find all the words that have the letter “o” in the above string 
+	#Create a place to put all the words
+	#count the words and identify them
+print("Now let us find the letter 'o' in all the words it appears in. Since we created a string, we first need to make a list with each word in it.")
+o_instance = saying.split(" ")
+o_words = []
+for o in o_instance:
+	if o.count("o")>0:
+			o_words.append(o)
+print("When using a loop we find that the words with o in it are: \n", o_words)
+o_instances = [o for o in o_words if o.count("o")>0]
+print("When using a list the you get the same four words:\n", o_instances)
+print("_______________________________")
+
+print("_______________________________")
+
+#3 Find all the words that have at least 5 letters in the above string
+	#reuse assests that have already been defined in section 2
+five = []
+for z in o_instance:
+	if len(str(z))>4:
+			five.append(z)
+print("In this saying, when using a loop, these words have more than 5 letters:\n", five)
+fiver = [z for z in o_instance if len(str(z))>4]
+print("Now when we use a list we will get the same result:\n", fiver)
+print("_______________________________")
+
+print("_______________________________")
+
+#4 Find all the numbers from 1 to 1000 that have a “3” in it. Ex: 23, 37, 903
+	#remeber python is funny when it counts numbers in a list it starts 0
+print ("Now let us move away from literature and onto numbers lets focus o nthe first thousand,\n with special focus on all the numbers that contain the number 3 somewhere")
+#Let us use a loop first
+thousand3 = []
+for threes in range(1,1001):
+		if str(threes).find("3") != -1:
+			thousand3.append(threes)
+print("When we use a loop we get the following numbers,:\n", thousand3)
+
+#Now with the help of a list comprehension,
+
+thousand3s = [three for three in range(1,1001) if str(three).find("3")!= -1 ]
+
+print("Using a list comprehension we get the same numbers:\n ", thousand3s)
