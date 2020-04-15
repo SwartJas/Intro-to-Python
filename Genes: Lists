@@ -1,0 +1,49 @@
+#8 April 2020 (145/04/2020)
+#Coenraad van Beek
+#Finding the length of the genes
+
+#Workflow 
+# 1 Create a random RNA sequence of 1000 bp
+# 2 Make a list genes starting from AUG
+# 3 Create a list of large genes
+# 4 Determine the length of large genes
+
+print("================================")
+
+print("================================")
+#1 Random RNA sequence generation
+	#Grab the correct modules and load them in
+		#Define the Bases
+import random
+bases = ['A', 'U', 'G', 'C']
+rna = random.choices(bases, k=1000)
+mrna = ''.join(rna)
+print('Your randomly generated 1000bp RNA sequence is:\n',mrna)
+print("================================")
+
+print("================================")
+#2 Populate your list with genes starting from AUG
+	#make use of the split command to seperate your 1000bp at every instnace of AUG
+gene = mrna.split('AUG')
+print("These are the possible genes if you create a list of sequences that start with AUG but does not include it: \n",gene)
+length = len(gene)
+print ('Th final total of genes are',length)
+print("================================")
+
+print("================================")
+#3. Create a list of large genes
+	#The append command is useful for adding new elements to a list, a for loop allows for automation of this task
+print("Large genes are those that are made up of more than 50 nucleotides")
+largegenes=[]
+for i in gene:
+	if len(i) > 50:
+		largegenes.append(i)
+print("The following list consists of large genes:\n", largegenes)
+print("================================")
+
+print("================================")
+# 4. Determine the length of large genes
+print ("The length of the large genes are as follows:")
+for a in largegenes:
+	print(len(a))
+print("================================")	
