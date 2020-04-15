@@ -7,7 +7,7 @@
 # 2 Make a list genes starting from AUG
 # 3 Create a list of large genes
 # 4 Determine the length of large genes
-
+# 5 Now with the help of a list comprehension
 print("================================")
 
 print("================================")
@@ -31,7 +31,7 @@ print ('Th final total of genes are',length)
 print("================================")
 
 print("================================")
-#3. Create a list of large genes
+#3 Create a list of large genes
 	#The append command is useful for adding new elements to a list, a for loop allows for automation of this task
 print("Large genes are those that are made up of more than 50 nucleotides")
 largegenes=[]
@@ -42,8 +42,16 @@ print("The following list consists of large genes:\n", largegenes)
 print("================================")
 
 print("================================")
-# 4. Determine the length of large genes
+#4 Determine the length of large genes
 print ("The length of the large genes are as follows:")
 for a in largegenes:
 	print(len(a))
-print("================================")	
+print("================================")
+
+print("================================")
+#5 Now with the help of a list comprehension
+	#len(str(x)) helps convert elements into intergersr
+largegenes = [fifty for fifty in gene if len(str(fifty))>50] 
+
+print("The list of large genes are:\n", largegenes)
+print("================================")
